@@ -48,38 +48,49 @@ questions.forEach((question) => {
 // const numbers = [10, 100, 50, 60, 80, 3];
 // const sortedNumbers = numbers.sort((a, b) => a - b);
 
-let data = {
-  title: 'Title 1',
-  45: '45',
-};
+// let data = {
+//   title: 'Title 1',
+//   45: '45',
+// };
 
-console.log(data['title']);
+// console.log(data['title']);
 
-const student = {
-  firstname: 'John',
-  lastname: 'Doe',
-  exams: {
-    midterm: 92,
-    final: 95,
-  },
-};
+// const student = {
+//   firstname: 'John',
+//   lastname: 'Doe',
+//   exams: {
+//     midterm: 92,
+//     final: 95,
+//   },
+// };
 
-console.log(student.exams.final, student['exams']['final']);
+// console.log(student.exams.final, student['exams']['final']);
 
-let numbers = [1, 2, 3, 4, 5, 6];
-let mystery = [1, 2, 3, 4, 5];
+// let numbers = [1, 2, 3, 4, 5, 6];
+// let mystery = [1, 2, 3, 4, 5];
 
 // compare the two arrays here
-const compareArrays = (a, b) => {
-  if (a.length !== b.length) {
-    return false;
-  }
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+// const compareArrays = (a, b) => {
+//   if (a.length !== b.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i] !== b[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-console.log(compareArrays(numbers, mystery)); // true
+// console.log(compareArrays(numbers, mystery));
+
+const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'];
+const suits = ['clubs', 'diamonds', 'hearts', 'spades'];
+
+function getCard(values, suits) {
+  const value = values[Math.floor(Math.random() * values.length)];
+  const suit = suits[Math.floor(Math.random() * suits.length)];
+  return { value: value, suit: suit };
+}
+
+console.log(getCard(values, suits));
